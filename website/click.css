@@ -1,0 +1,974 @@
+/*/////////////////Standaard//////////////////////*/
+
+body {
+    /*    background-color: #1D3C73;*/
+    background-image: url(images/Kaylee-gecomprimeerd-1.png);
+    background-size: cover;
+    z-index: 0;
+}
+
+h1 {
+    font-family: 'Nexa Regular';
+    font-size: 20px;
+    color: white;
+    width: 15em;
+}
+
+h2 {
+    font-family: 'Nexa Bold';
+    font-size: 30px;
+    color: white;
+    margin-top: -.3em;
+    margin-bottom: -.3em;
+}
+
+h3 {
+    font-family: 'Nexa Regular';
+    font-size: 20px;
+    color: white;
+    margin-top: -.3em;
+    margin-bottom: -.3em;
+}
+
+p {
+    font-family: 'Nexa Regular';
+    font-size: 16px;
+    color: black;
+    width: 15em;
+}
+
+
+/*fonts*/
+
+@font-face {
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('fonts/Nexa Regular'), url('fonts/NexaRegular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Nexa Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('fonts/Nexa Bold'), url('fonts/NexaBold.woff') format('woff');
+}
+
+
+/*/////////////////header//////////////////////*/
+
+header {
+    display: flex;
+    position: sticky;
+}
+
+.logo {
+    width: 25%;
+    height: 25%;
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+
+/*navigatie*/
+
+header>nav {
+    margin: auto;
+    display: flex;
+    margin-right: .5em;
+}
+
+header>nav>ul {
+    list-style: none;
+    display: flex;
+}
+
+
+/*
+.menuHeader li {
+    margin-right: .5em;
+}
+*/
+
+header>nav>ul>li {
+    margin-right: auto;
+    justify-content: flex-end;
+    margin-right: .5em;
+}
+
+.menuHeader button {
+    font-family: 'Nexa Bold';
+    font-size: .7em;
+    color: #EF7B23;
+    background-color: transparent;
+    border-radius: 3em;
+    border: .1em solid #EF7B23;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    cursor: pointer;
+}
+
+.menuHeader li img {
+    width: 1.5em;
+    margin-right: .5em;
+}
+
+.inloggen:hover {
+    color: white;
+    background-color: #EF7B23;
+    border-color: #EF7B23;
+}
+
+.registreren:hover {
+    color: white;
+    background-color: #EF7B23;
+    border-color: #EF7B23;
+}
+
+
+/*inlog pop up */
+
+.popInlog {
+    position: absolute;
+    opacity: 0;
+}
+
+.popInlogActive form {
+    display: none;
+}
+
+.popInlogActive .inlogAanbod {
+    display: none;
+}
+
+.popInlogActive {
+    background-color: white;
+    border-radius: .5em;
+    height: 5em;
+    width: 15em;
+    position: absolute;
+    margin-left: 80%;
+    animation: slideIn 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(0);
+        opacity: .5;
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+}
+
+.popInlog p {
+    color: #1D3C73;
+    margin-left: 1em;
+    margin-bottom: -.3em;
+    font-size: .7em;
+}
+
+.popInlog p:last-of-type {
+    font-family: 'Nexa Bold';
+    color: #1D3C73;
+    margin-left: 1em;
+    margin-bottom: -.3em;
+    font-size: .7em;
+}
+
+.inloggenInPop {
+    font-family: 'Nexa Bold';
+    font-size: .7em;
+    border-radius: 3em;
+    color: white;
+    background-color: #EF7B23;
+    border-color: #EF7B23;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    float: right;
+    margin-right: .5em;
+    cursor: pointer;
+}
+
+.inloggenInPop:hover {
+    color: #EF7B23;
+    background-color: transparent;
+    border: .1em solid #EF7B23;
+}
+
+.inloggenClick {
+    height: 8em;
+    margin-top: -3em;
+}
+
+.inloggenClick form {
+    display: contents;
+    font-family: 'Nexa Regular';
+    font-size: .7em;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+}
+
+.inloggenClick .inlogAanbod {
+    display: contents;
+    font-family: 'Nexa Bold';
+    font-size: 1em;
+    color: #EF7B23;
+    margin-right: 3em;
+    cursor: pointer;
+}
+
+
+/*
+.inloggenClick .inlogAanbod:hover {
+    color: #EF7B23;
+    background-color: transparent;
+    border: .1em solid #EF7B23;
+}
+*/
+
+.inloggenClick label {
+    margin-top: .5em;
+}
+
+.inloggenClick input {
+    border-radius: .5em;
+    margin-bottom: 1em;
+}
+
+.inloggenClick p {
+    display: none;
+}
+
+.inloggenClick .inloggenInPop {
+    display: none;
+}
+
+.kruis {
+    border-radius: 10em;
+    color: #EF7B23;
+    background-color: transparent;
+    border: .1em solid #EF7B23;
+    float: right;
+    margin-top: .5em;
+    cursor: pointer;
+    margin-right: .5em;
+}
+
+.popInlogOff {
+    display: none;
+}
+
+
+/*notificatie*/
+
+.yesNotification {
+    display: none;
+}
+
+.notificatie {
+    position: absolute;
+    opacity: 0;
+}
+
+.notificationActive .noNotification {
+    display: none;
+}
+
+.notificationActive .yesNotification {
+    display: contents;
+}
+
+.noteGaVerder {
+    font-family: 'Nexa Bold';
+    font-size: .7em;
+    border-radius: 3em;
+    color: white;
+    background-color: #EF7B23;
+    border-color: #EF7B23;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    float: right;
+    margin-right: .5em;
+    cursor: pointer;
+}
+
+.noteGaVerder:hover {
+    color: #EF7B23;
+    background-color: transparent;
+    border: .1em solid #EF7B23;
+}
+
+.notificatieOff {
+    display: none;
+}
+
+
+/*/////////////////main//////////////////////*/
+
+
+/*tekst*/
+
+.tekstHome {
+    margin-top: 8%;
+}
+
+.tekstHome h2 {
+    width: 7em;
+}
+
+
+/*hotel*/
+
+#welkomBlok {
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+}
+
+.hotel {
+    width: 15em;
+}
+
+
+/*buttons*/
+
+.bekijkButton {
+    margin-left: 28.5%;
+    margin-top: 4em;
+}
+
+.nietGevuld {
+    font-family: 'Nexa Bold';
+    font-size: 1em;
+    color: #EF7B23;
+    background-color: transparent;
+    border-radius: 3em;
+    border: .1em solid #EF7B23;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    box-shadow: 10px 10px 70px black;
+    cursor: pointer;
+}
+
+.nietGevuld:hover {
+    color: white;
+    background-color: #EF7B23;
+    border-color: #EF7B23;
+}
+
+.welGevuld {
+    font-family: 'Nexa Bold';
+    font-size: 1em;
+    color: white;
+    background-color: #EF7B23;
+    border-radius: 3em;
+    border: .1em solid #EF7B23;
+    margin-right: 3em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    box-shadow: 10px 10px 70px black;
+    cursor: pointer;
+}
+
+.welGevuld:hover {
+    color: #EF7B23;
+    background-color: transparent;
+    border: .1em solid #EF7B23;
+}
+
+.buttonsHome {
+    opacity: 0;
+}
+
+.welkomBlok {
+    opacity: 0;
+}
+
+
+/*uitleg button pop up*/
+
+.popButton {
+    opacity: 0;
+}
+
+.articleFadeIn {
+    background-color: white;
+    /*    border: .1em solid white;*/
+    border-radius: .5em;
+    height: 10em;
+    width: 32em;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: -25em;
+    margin-bottom: 8em;
+    animation: easeIn 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes easeIn {
+    0% {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.popButton.articleFadeOut {
+    animation: easeOut 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes easeOut {
+    0% {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(80%);
+        opacity: 0;
+    }
+    100% {
+        display: none;
+        position: absolute;
+    }
+}
+
+.popUpButtons {
+    padding-left: .5em;
+}
+
+.popUpButtons h1 {
+    padding-top: .5em;
+    padding-left: .5em;
+    color: #1D3C73;
+}
+
+.popUpButtons p {
+    color: #1D3C73;
+    width: 30em;
+    padding-left: .5em;
+    margin-top: -5px;
+}
+
+.gaDoor {
+    font-family: 'Nexa Bold';
+    font-size: 1em;
+    color: #EF7B23;
+    background-color: transparent;
+    border-radius: 1em;
+    border: .1em solid #EF7B23;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    box-shadow: 10px 10px 70px black;
+    cursor: pointer;
+    float: right;
+    margin-right: .7em;
+    margin-top: -5px;
+}
+
+.gaDoor:hover {
+    color: white;
+    background-color: #EF7B23;
+    border-color: #EF7B23;
+}
+
+.welkomBlokWeg {
+    display: none;
+    position: absolute;
+}
+
+.buttonsHomeWeg {
+    display: none;
+}
+
+
+/*aanbod*/
+
+.aanbod {
+    display: none;
+}
+
+.aanbodPopupBlur {
+    display: contents;
+}
+
+.aanbodPopupBlur div {
+    filter: blur(3px);
+}
+
+
+/*
+.aanbodPopup {
+    display: contents;
+}
+*/
+
+.aanbodPopup div {
+    filter: none;
+}
+
+.aanbod div h1 {
+    color: #1D3C73;
+}
+
+.aanbod div {
+    background-color: white;
+    border-radius: .5em;
+    border-radius: .5em;
+    width: 90%;
+    height: 15em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-shadow: 10px 10px 70px black;
+}
+
+.aanbod div img {
+    /*    width: 15.8em;*/
+    height: 15em;
+    border-radius: .5em 0em 0em .5em;
+}
+
+.aanbod div:last-of-type {
+    margin-bottom: 5em;
+}
+
+.kolom1 {
+    width: 30%;
+}
+
+.kolom2 {
+    width: 50%;
+    margin-left: 1.7em;
+}
+
+.kolom2 h1 {
+    width: 28em;
+}
+
+.kolom2 h2 {
+    color: black;
+    font-size: 18px;
+    width: 28em;
+}
+
+.kolom2 p {
+    width: 30em;
+    font-size: 15px;
+}
+
+.aantalBoekingen {
+    color: red;
+}
+
+.favoriet {
+    font-family: 'Nexa Bold';
+    color: white;
+    background-color: #1D3C73;
+    opacity: 0.5;
+    border-radius: .5em;
+    padding: .5em;
+    text-align: center;
+}
+
+.kamers {
+    font-family: 'Nexa Bold';
+    color: #EF7B23;
+    text-decoration: underline;
+}
+
+.kolom3 {
+    width: 20%;
+    width: 17%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.kolom3 button {
+    margin-bottom: .5em;
+}
+
+.kolom3 .prijs {
+    opacity: 0;
+}
+
+/*
+.aanbod2 .prijs {
+    opacity: 0;
+    margin-bottom: -.5em;
+}
+*/
+
+.ster {
+    color: #EF7B23;
+    /*    margin-bottom: 7.5em;*/
+    margin-right: 3em;
+    width: 8em;
+    text-align: right;
+}
+
+.zieDeal1,
+.zieDeal2,
+.zieDeal3 {
+    font-family: 'Nexa Bold';
+    font-size: 1em;
+    color: white;
+    background-color: #EF7B23;
+    border-color: #EF7B23;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    box-shadow: 10px 10px 70px black;
+    cursor: pointer;
+    border-radius: 3em;
+    margin-top: 2em;
+}
+
+.zieDeal1:hover {
+    color: #EF7B23;
+    background-color: transparent;
+    border-radius: 1em;
+    border: .1em solid #EF7B23;
+}
+
+.zieDeal2:hover {
+    color: #EF7B23;
+    background-color: transparent;
+    border-radius: 1em;
+    border: .1em solid #EF7B23;
+}
+
+.zieDeal3:hover {
+    color: #EF7B23;
+    background-color: transparent;
+    border-radius: 1em;
+    border: .1em solid #EF7B23;
+}
+
+.kies {
+    font-family: 'Nexa Bold';
+    font-size: 1em;
+    color: #EF7B23;
+    background-color: transparent;
+    border-radius: 1em;
+    border: .1em solid #EF7B23;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    box-shadow: 10px 10px 70px black;
+    cursor: pointer;
+}
+
+.kies:hover {
+    color: white;
+    background-color: #EF7B23;
+    border-color: #EF7B23;
+    border-radius: 3em;
+}
+
+.kies2 {
+    font-family: 'Nexa Bold';
+    font-size: 1em;
+    color: #EF7B23;
+    background-color: transparent;
+    border-radius: 1em;
+    border: .1em solid #EF7B23;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    box-shadow: 10px 10px 70px black;
+    cursor: pointer;
+}
+
+.kies2:hover {
+    color: white;
+    background-color: #EF7B23;
+    border-color: #EF7B23;
+    border-radius: 3em;
+}
+
+.kies3 {
+    font-family: 'Nexa Bold';
+    font-size: 1em;
+    color: #EF7B23;
+    background-color: transparent;
+    border-radius: 1em;
+    border: .1em solid #EF7B23;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    box-shadow: 10px 10px 70px black;
+    cursor: pointer;
+}
+
+.kies3:hover {
+    color: white;
+    background-color: #EF7B23;
+    border-color: #EF7B23;
+    border-radius: 3em;
+}
+
+
+/*read more*/
+
+
+/*
+.prijs2 {
+    display: none;
+    opacity: 0;
+}
+*/
+
+.aanbod1RM .prijs {
+    opacity: 1;
+    width: 8em;
+    display: flex;
+    justify-content: center;
+}
+
+.aanbod2RM .prijs {
+    opacity: 1;
+    width: 8em;
+/*    margin-bottom: -.5em;*/
+    display: flex;
+    justify-content: center;
+}
+
+.kolom3:nth-of-type(2) {
+    color: red
+}
+
+
+/*
+.aanbod2RM .prijs2 {
+    color: red;
+    
+    opacity: 1;
+width: 8em;
+display: flex;
+justify-content: center;
+
+}
+*/
+
+.aanbod3RM .prijs {
+    opacity: 1;
+    width: 8em;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*//////////////////////////main: end page//////////////////////*/
+
+.intro {
+    background-color: white;
+    opacity: 0.7;
+    height: 25em;
+    margin-top: 3em;
+    box-shadow: 10px 10px 70px black;
+}
+
+.intro div {
+    margin-top: 7em;
+    text-align: center;
+}
+
+.intro .verleiding {
+    font-family: 'Nexa Bold';
+    font-size: 1em;
+    color: white;
+    background-color: #EF7B23;
+    border-radius: 3em;
+    border: .1em solid #EF7B23;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    box-shadow: 10px 10px 70px black;
+    cursor: pointer;
+    margin-right: 1em;
+    text-decoration: none;
+}
+
+.intro .verleiding:hover {
+    color: #EF7B23;
+    background-color: transparent;
+    border: .1em solid #EF7B23;
+}
+
+.intro .video {
+    font-family: 'Nexa Bold';
+    font-size: 1em;
+    color: #EF7B23;
+    background-color: transparent;
+    border-radius: 3em;
+    border: .1em solid #EF7B23;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    box-shadow: 10px 10px 70px black;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 1em;
+}
+
+.intro .video:hover {
+    color: white;
+    background-color: #EF7B23;
+    border-color: #EF7B23;
+}
+
+#verleidingsTechnieken {
+    scroll-behavior: smooth;
+    margin-top: 20%;
+}
+
+.explaining {
+    display: none;
+}
+
+.experienceWeg {
+    display: none;
+}
+
+.menuHeaderWeg {
+    display: none;
+}
+
+.logoWeg {
+    display: none;
+}
+
+.seeExplaining {
+    display: contents;
+}
+
+.seeExplaining h1 {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 45px;
+    color: #EF7B23;
+    text-align: center;
+}
+
+.seeExplaining h2 {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+    color: #1D3C73;
+    text-align: center;
+    padding-top: 3em;
+}
+
+.seeExplaining h3 {
+    font-size: 20px;
+    color: #1D3C73;
+    text-align: center;
+    padding-top: 1em;
+}
+
+.seeExplaining .uitleg h3 {
+    font-size: 20px;
+    color: white;
+    text-align: left;
+    padding-top: .5em;
+    padding-left: .5em;
+}
+
+.seeExplaining p {
+    width: 30em;
+    color: white;
+    padding-left: .5em;
+}
+
+.seeExplaining img {
+    width: 90%;
+    padding-left: 1em;
+    padding-top: 1em;
+}
+
+.seeExplaining container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+    justify-content: center;
+}
+
+.design {
+    width: 30%;
+}
+
+.design img {
+    border-radius: .5em;
+}
+
+.uitleg {
+    margin-left: 3em;
+    background-color: transparent;
+    border: .1em solid #EF7B23;
+    border-radius: .5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.afsluiting {
+    margin-top: 5em;
+    margin-bottom: 5em;
+    text-align: center;
+}
+
+.afsluiting .video {
+    font-family: 'Nexa Bold';
+    font-size: 1em;
+    color: white;
+    background-color: #EF7B23;
+    border-radius: 3em;
+    border: .1em solid #EF7B23;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    box-shadow: 10px 10px 70px black;
+    cursor: pointer;
+    margin-right: 1em;
+    text-decoration: none;
+}
+
+.afsluiting .video:hover {
+    color: #EF7B23;
+    background-color: transparent;
+    border: .1em solid #EF7B23;
+}
+
+
+/*/////////////////footer//////////////////////*/
